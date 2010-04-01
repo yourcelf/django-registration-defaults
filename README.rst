@@ -43,9 +43,9 @@ You can add the templates in one of two ways:
         template loader (it is enabled by default), you can include the
         templates by adding ``"registration_defaults"`` to your project's
         ``INSTALLED_APPS`` setting.  Keep in mind that ``admin`` defines some
-        templates for login/logout, so if you want to use consistent base
-        templates and styling for all registration and login/logout functions,
-        you should add ``registration_defaults`` before
+        templates for changing and retrieving passwords, so if you want to use
+        consistent base templates and styling for all registration and
+        login/logout functions, you should add ``registration_defaults`` before
         ``django.contrib.admin`` so that it will take precedence::
 
             INSTALLED_APPS = (
