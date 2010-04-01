@@ -37,33 +37,37 @@ your settings file::
 
     from registration_defaults.settings import *
 
-If you're using the ``django.template.loaders.app_directories.Loader`` template
-loader (it is enabled by default), you can include the templates by adding
-``"registration_defaults"`` to your project's ``INSTALLED_APPS`` setting.  Keep
-in mind that ``admin`` defines some templates for login/logout, so if you want
-to use consistent base templates and styling for all registration and
-login/logout functions, you should add ``registration_defaults`` before
-``django.contrib.admin`` so that it will take precedence.::
+You can add the templates in one of two ways:
 
-    INSTALLED_APPS = (
-        ...
-        "registration_defaults",
-        "django.contrib.admin",
-        ...
-        "registration",
-    )
+    1.  If you're using the ``django.template.loaders.app_directories.Loader``
+        template loader (it is enabled by default), you can include the
+        templates by adding ``"registration_defaults"`` to your project's
+        ``INSTALLED_APPS`` setting.  Keep in mind that ``admin`` defines some
+        templates for login/logout, so if you want to use consistent base
+        templates and styling for all registration and login/logout functions,
+        you should add ``registration_defaults`` before
+        ``django.contrib.admin`` so that it will take precedence::
 
-Alternatively, if ``django.template.loaders.filesystem.Loader`` is listed
-before the app directories loader, you can add ``REGISTRATION_TEMPLATE_DIR`` to
-your ``TEMPLATE_DIRS`` setting.  If you do this, it is not necessary to include
-``registration_defaults`` as an installed app::
+            INSTALLED_APPS = (
+                ...
+                "registration_defaults",
+                "django.contrib.admin",
+                ...
+                "registration",
+            )
 
-    from registration_defaults.settings import *
+    2. Alternatively, if ``django.template.loaders.filesystem.Loader`` is
+       listed before the app directories loader, you can add
+       ``REGISTRATION_TEMPLATE_DIR`` to your ``TEMPLATE_DIRS`` setting.  If you
+       do this, it is not necessary to include ``registration_defaults`` as an
+       installed app::
 
-    TEMPLATE_DIRS = (
-        ...
-        REGISTRATION_TEMPLATE_DIR,
-    )
+            from registration_defaults.settings import *
+
+            TEMPLATE_DIRS = (
+                ...
+                REGISTRATION_TEMPLATE_DIR,
+            )
 
 Base templates
 ~~~~~~~~~~~~~~
