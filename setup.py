@@ -1,4 +1,5 @@
-from setuptools import setup
+from distutils.core import setup
+from distutils.command.install import INSTALL_SCHEMES
 import os
 
 root = os.path.dirname(__file__)
