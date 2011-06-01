@@ -2,11 +2,11 @@ from distutils.core import setup
 from distutils.command.install import INSTALL_SCHEMES
 import os
 
-root = os.path.dirname(__file__)
+root = os.path.dirname(os.path.abspath(__file__))
 os.chdir(root)
 
 master_file = open(os.path.join(root, ".git", "refs", "heads", "master"))
-VERSION = '0.1.git-' + master_file.read().strip()
+VERSION = '0.2.git-' + master_file.read().strip()
 master_file.close()
 
 # Make data go to the right place.
