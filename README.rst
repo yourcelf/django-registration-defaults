@@ -82,7 +82,8 @@ You must either provide a ``base.html`` for the registration templates to
 inherit from, or override ``registration/registration_base.html``.  The base
 template should provide a ``title`` block for the content of the HTML title,
 and a ``content`` block for content (NOTE: this has changed from previously
-using ``body`` to be more in line with `rusable app standards <http://django-reusable-app-docs.readthedocs.org/en/latest/index.html`_).  For example::
+using ``body`` to be more in line with `reusable app standards 
+<http://django-reusable-app-docs.readthedocs.org/en/latest/index.html>`_ ).  For example::
 
     <!doctype html>
     <html>
