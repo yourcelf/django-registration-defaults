@@ -1,9 +1,7 @@
 from distutils.core import setup
 from distutils.command.install import INSTALL_SCHEMES
-import os
 
-root = os.path.dirname(os.path.abspath(__file__))
-os.chdir(root)
+import os
 
 VERSION = '0.3'
 
