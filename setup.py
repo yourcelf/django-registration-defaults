@@ -10,9 +10,6 @@ VERSION = '0.3'
 for scheme in INSTALL_SCHEMES.values():
     scheme['data'] = scheme['purelib']
 
-template_dir = "registration_defaults/templates/registration"
-templates = [os.path.join(template_dir, f) for f in os.listdir(template_dir)]
-
 setup(
     name='django-registration-defaults',
     version=VERSION,
@@ -28,7 +25,7 @@ setup(
     license="MIT License",
     platforms=["any"],
     packages=['registration_defaults'],
-    data_files=[(template_dir, templates)],
+    package_data={'registration_defaults': ['templates/registration/*.*']},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
