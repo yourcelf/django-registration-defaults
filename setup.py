@@ -28,7 +28,7 @@ setup(
     license="MIT License",
     platforms=["any"],
     packages=['registration_defaults'],
-    data_files=[(template_dir, templates)],
+    package_data={'registration_defaults': templates},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
