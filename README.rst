@@ -26,7 +26,7 @@ git source using `pip <http://pip.openplans.org/>`_ with `virtualenv
 dependency ``django-registration``) is as follows::
 
     django-registration
-    -e git://github.com/yourcelf/django-registration-defaults.git#egg=django-registration-defaults
+    django-registration-defaults
 
 Setup
 ~~~~~
