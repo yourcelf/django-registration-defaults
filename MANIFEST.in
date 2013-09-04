@@ -1,0 +1,1 @@
+recursive-include registration_defaults *.py *.html *.txt
