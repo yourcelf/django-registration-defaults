@@ -1,10 +1,14 @@
 {% extends "registration/registration_base.html" %}
-{% block title %}{% if account %}Activation complete{% else %}Activation problem{% endif %}{% endblock %}
+{% load i18n %}
+{% url 'auth_login' as auth_login_url %}
+{% block title %}{% if account %}{% trans "Activation complete" %}{% else %}{% trans "Activation problem" %}{% endif %}{% endblock %}
 {% block content %}
 {% if account %}
-Thanks {{ account }}, activation complete!  You may now <a href='{% url 'auth_login' %}'>login</a> using the username and password you set at registration.
+{% blocktrans %}
+Thanks {{ account }}, activation complete!
+You may now <a href='{{ auth_login_url }}'>login</a> using the username and password you set at registration.
+{% endblocktrans %}
 {% else %}
-Oops &ndash; it seems that your activation key is invalid.  Please check the url again.
+{% blocktrans %}Oops &ndash; it seems that your activation key is invalid.  Please check the url again.{% endblocktrans %}
 {% endif %}
 {% endblock %}
-
