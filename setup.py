@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-VERSION = '0.4.2'
+VERSION = '0.4.3'
 
 setup(
     name='django-registration-defaults',
@@ -25,6 +25,9 @@ setup(
         "Programming Language :: Python",
         "Framework :: Django",
     ],
+    packages=['registration_defaults'],
+    package_dir={'registration_defaults': 'registration_defaults'},
+    package_data={'registration_defaults': ['templates/*/*.html', 'templates/*/*.txt']},
     include_package_data=True,
     zip_safe=False,
 )
