@@ -1,8 +1,8 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
-{% url 'auth_login' as auth_login_url %}
 {% block title %}{% if account %}{% trans "Activation complete" %}{% else %}{% trans "Activation problem" %}{% endif %}{% endblock %}
 {% block content %}
+{% url 'auth_login' as auth_login_url %}
 {% if account %}
 {% blocktrans %}
 Thanks {{ account }}, activation complete!
