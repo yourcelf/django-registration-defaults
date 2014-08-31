@@ -25,6 +25,10 @@ setup(
         "Programming Language :: Python",
         "Framework :: Django",
     ],
+    install_requires=[
+        'Django>=1.5',
+        'django-registration>=1.0',
+    ],
     packages=['registration_defaults'],
     package_dir={'registration_defaults': 'registration_defaults'},
     package_data={'registration_defaults': ['templates/*/*.html', 'templates/*/*.txt']},
